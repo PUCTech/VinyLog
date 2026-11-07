@@ -7,7 +7,7 @@ class Edition(Base):
 
     id: Mapped[int] = mapped_column(primary_key= True)
     album_id: Mapped[int] = mapped_column(ForeignKey("albums.id"), nullable= False)
-    discogs_release_id: Mapped[int] = mapped_column(nullable= True)
+    discogs_release_id: Mapped[int] = mapped_column(nullable= True, unique= True)
     edition_name: Mapped[str] = mapped_column(String(255), nullable= True)
     edition_year: Mapped[int] = mapped_column(nullable= True)
     format: Mapped[str] = mapped_column(String(10),CheckConstraint("format IN ('CD', 'VINYL')") ,nullable= False)

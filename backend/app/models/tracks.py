@@ -1,9 +1,11 @@
 from app.db.connection import Base
-from sqlalchemy import String, ForeignKey
+from sqlalchemy import String, ForeignKey, UniqueConstraint
 from sqlalchemy.orm import Mapped, mapped_column
 
 class Track(Base):
     __tablename__ = "tracks"
+
+    __table_args__ = (UniqueConstraint("track_number", "edition_id", name="unique_user_album_review"), )
 
     id: Mapped[int] = mapped_column(primary_key= True)
     edition_id: Mapped[int] = mapped_column(ForeignKey("editions.id"), nullable= False)
