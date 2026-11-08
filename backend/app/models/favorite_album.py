@@ -1,6 +1,7 @@
 from app.db.connection import Base
-from sqlalchemy import ForeignKey, UniqueConstraint
+from sqlalchemy import ForeignKey, UniqueConstraint, DateTime
 from sqlalchemy.orm import Mapped, mapped_column
+from datetime import datetime
 
 class FavoriteAlbums(Base):
     __tablename__ = "favorite_albums"
@@ -10,3 +11,5 @@ class FavoriteAlbums(Base):
     id: Mapped[int] = mapped_column(primary_key= True)
     album_id: Mapped[int] = mapped_column(ForeignKey("albums.id"), nullable= False)
     user_id: Mapped[int] = mapped_column(ForeignKey("users.id"), nullable= False)
+    created_at: Mapped[datetime | None] = mapped_column(DateTime(), nullable= False)
+    updated_at: Mapped[datetime | None] = mapped_column(DateTime(), nullable= False)

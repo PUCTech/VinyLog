@@ -1,6 +1,7 @@
 from app.db.connection import Base
-from sqlalchemy import ForeignKey, Text, CheckConstraint, UniqueConstraint
+from sqlalchemy import ForeignKey, Text, CheckConstraint, UniqueConstraint, DateTime
 from sqlalchemy.orm import Mapped, mapped_column
+from datetime import datetime
 
 class Review(Base):
     __tablename__ = "reviews"
@@ -12,3 +13,5 @@ class Review(Base):
     album_id: Mapped[int] = mapped_column(ForeignKey ("albums.id"), nullable= False)
     rating: Mapped[int] = mapped_column(CheckConstraint("rating >= 1 AND rating <= 5"),nullable= False)
     review_text: Mapped[str | None] = mapped_column(Text, nullable= True)
+    created_at: Mapped[datetime | None] = mapped_column(DateTime(), nullable= False)
+    updated_at: Mapped[datetime | None] = mapped_column(DateTime(), nullable= False)
