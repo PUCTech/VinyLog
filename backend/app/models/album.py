@@ -11,6 +11,6 @@ class Album(Base):
     release_year: Mapped[int | None] = mapped_column(nullable= True)
     discogs_master_id: Mapped[int | None] = mapped_column(nullable= True, unique= True)
     metadata_source: Mapped[str | None] = mapped_column(String(30), nullable= True)
-    created_at: Mapped[datetime | None] = mapped_column(DateTime(), nullable= False)
-    updated_at: Mapped[datetime | None] = mapped_column(DateTime(), nullable= False)
+    created_at: Mapped[datetime | None] = mapped_column(DateTime(), nullable= True)
+    updated_at: Mapped[datetime | None] = mapped_column(DateTime(), nullable= True)
 

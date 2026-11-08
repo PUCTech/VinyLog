@@ -13,5 +13,5 @@ class Edition(Base):
     edition_year: Mapped[int | None] = mapped_column(nullable= True)
     format: Mapped[str] = mapped_column(String(10),CheckConstraint("format IN ('CD', 'VINYL')") ,nullable= False)
     cover_url: Mapped[str | None] = mapped_column(Text, nullable= True)
-    created_at: Mapped[datetime | None] = mapped_column(DateTime(), nullable= False)
-    updated_at: Mapped[datetime | None] = mapped_column(DateTime(), nullable= False)
+    created_at: Mapped[datetime | None] = mapped_column(DateTime(), nullable= True)
+    updated_at: Mapped[datetime | None] = mapped_column(DateTime(), nullable= True)

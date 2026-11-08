@@ -13,5 +13,5 @@ class Track(Base):
     title: Mapped[str] = mapped_column(String(255), nullable= False)
     track_number: Mapped[int] = mapped_column(CheckConstraint("track_number > 0"), nullable= False)
     duration_seconds: Mapped[int | None] = mapped_column(CheckConstraint("duration_seconds >= 0"),nullable= True)
-    created_at: Mapped[datetime | None] = mapped_column(DateTime(), nullable= False)
+    created_at: Mapped[datetime | None] = mapped_column(DateTime(), nullable= True)
     

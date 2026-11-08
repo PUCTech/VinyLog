@@ -10,7 +10,7 @@ class User(Base):
     name: Mapped[str] = mapped_column(String(150), nullable= False)
     email: Mapped[str] = mapped_column(String(255), nullable= False, unique= True)
     password_hash: Mapped[str] = mapped_column(String(255), nullable= False)
-    created_at: Mapped[datetime | None] = mapped_column(DateTime(), nullable= False)
-    updated_at: Mapped[datetime | None] = mapped_column(DateTime(), nullable= False)
+    created_at: Mapped[datetime | None] = mapped_column(DateTime(), nullable= True)
+    updated_at: Mapped[datetime | None] = mapped_column(DateTime(), nullable= True)
 
 
