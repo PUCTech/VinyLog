@@ -1,0 +1,86 @@
+.disc-card {
+  padding: 12px;
+  border-radius: 20px;
+  background: #fff;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.disc-card__cover {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  aspect-ratio: 1;
+  border-radius: 14px;
+  background: #dcefe4;
+}
+
+.disc-card__vinyl {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: #111;
+}
+
+.disc-card__label {
+  width: 35%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: var(--color-mint);
+}
+
+.disc-card__favorite {
+  position: absolute;
+  top: 8px;
+  right: 10px;
+  color: #d9743f;
+  font-size: 18px;
+}
+
+.disc-card__title {
+  margin: 12px 0 4px;
+  font-size: 16px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.disc-card__meta {
+  margin: 0 0 10px;
+  color: var(--color-muted);
+  font-size: 13px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.disc-card__footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.disc-card__stars {
+  color: #d9743f;
+  font-size: 14px;
+}
+
+.disc-card__badge {
+  padding: 3px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.disc-card__badge--vinil {
+  background: #fde3d3;
+  color: #b4572a;
+}
+
+.disc-card__badge--cd {
+  background: #dcefe4;
+  color: var(--color-primary);
+}
