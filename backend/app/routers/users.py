@@ -1,5 +1,6 @@
 from pydantic import BaseModel, Field
 from typing import Literal
+from fastapi import APIRouter
 
 class CollectionItem(BaseModel):
     id: int
@@ -19,3 +20,9 @@ class User(BaseModel):
 class Dashboard(BaseModel):
     user: User
     items: list[CollectionItem]
+
+router = APIRouter()
+
+@router.get("/dashboard", response_model = Dashboard)
+def get_dashboard():
+    pass
