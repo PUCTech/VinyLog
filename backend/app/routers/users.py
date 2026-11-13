@@ -11,3 +11,11 @@ class CollectionItem(BaseModel):
     #Limits the rating to be between 0 and 5, with zero meaning that the album hasnt been rated
     rating: int = Field(ge = 0, le = 5)
     favorite: bool
+
+class User(BaseModel):
+    name: str
+    initials: str
+
+class Dashboard(BaseModel):
+    user: User
+    items: list[CollectionItem]
