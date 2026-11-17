@@ -1,8 +1,8 @@
 import { useState } from 'react'
 import DashboardHeader from '../components/DashboardHeader'
-import DiscCard from '../components/DiscCard'
-import FilterTabs from '../components/FilterTabs'
-import StatCard from '../components/StatCard'
+import DiscCard from '../components/dashboard/DiscCard'
+import FilterTabs from '../components/dashboard/FilterTabs'
+import StatCard from '../components/dashboard/StatCard'
 import { mockDiscs, mockUser } from '../data/mockDiscs'
 
 function Dashboard() {
