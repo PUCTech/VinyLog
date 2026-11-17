@@ -1,0 +1,32 @@
+.features {
+  background: #1a1d1c;
+  color: #ffffff;
+  padding: 80px 10%;
+}
+
+.features h2 {
+  font-size: 32px;
+  margin-bottom: 40px;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.feature-card {
+  background: #262a28;
+  border-radius: 12px;
+  padding: 24px;
+}
+
+.feature-card p {
+  color: #b8c2be;
+  margin-top: 8px;
+}
+@media (max-width: 768px) {
+  .features-grid {
+    grid-template-columns: 1fr;
+  }
+}

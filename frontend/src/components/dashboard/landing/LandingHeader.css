@@ -1,0 +1,23 @@
+.landing-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px 10%;
+}
+
+.landing-logo {
+  height: 40px;
+}
+
+.landing-login-btn {
+  padding: 8px 20px;
+  border: 1px solid #d9dedc;
+  border-radius: 999px;
+  color: #2f3b38;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.landing-login-btn:hover {
+  background: #f0f3f2;
+}

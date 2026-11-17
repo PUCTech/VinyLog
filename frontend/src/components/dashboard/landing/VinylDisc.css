@@ -1,0 +1,35 @@
+.vinyl-disc {
+  width: 360px;
+  height: 360px;
+  border-radius: 50%;
+  background: repeating-radial-gradient(
+    circle at center,
+    #1a1d1c 0px,
+    #1a1d1c 3px,
+    #262a28 4px,
+    #1a1d1c 5px
+  );
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.vinyl-label {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  background: #b5d6b2;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.vinyl-hole {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #ffffff;
+}
