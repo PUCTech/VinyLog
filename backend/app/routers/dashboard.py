@@ -25,4 +25,8 @@ router = APIRouter()
 
 @router.get("/dashboard", response_model = Dashboard)
 def get_dashboard():
+    """Dashboard endpoint for user data and collection items
+
+    Not yet implemented
+    """
     pass
