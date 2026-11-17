@@ -1,5 +1,5 @@
-import logo from '../assets/images/logo.png'
-import { mockUser } from '../data/mockDiscs'
+import logo from "../../assets/images/logo.png";
+import { mockUser } from "../../data/mockDiscs";
 import './DashboardHeader.css'
 
 function DashboardHeader({ search, onSearchChange }) {

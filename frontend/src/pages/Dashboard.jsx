@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import DashboardHeader from '../components/DashboardHeader'
+import DashboardHeader from "../components/dashboard/DashboardHeader";
 import DiscCard from '../components/dashboard/DiscCard'
 import FilterTabs from '../components/dashboard/FilterTabs'
 import StatCard from '../components/dashboard/StatCard'
